@@ -1,6 +1,5 @@
 import { motion} from 'framer-motion';
 import Circle2 from './Circle2';
-import Circle3 from './Circle3';
 import PoojaImg from "/src/assets/poojaCreativeimg.png"
 import LinkArr from '../Data/linkData';
 import { Link } from 'react-router-dom';

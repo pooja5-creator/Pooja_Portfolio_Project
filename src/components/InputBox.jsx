@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function InputBox({labelName,type}) {
   return (
-     <div className='w-[500px]  h-[80px] flex justify-center 
+     <div className='w-full sm:w-[500px] h-[80px] flex justify-center 
      items-start gap-3 flex-col'>
             <label htmlFor="" className='text-gray-100 logo'>{labelName}</label>
             <input type={type} 

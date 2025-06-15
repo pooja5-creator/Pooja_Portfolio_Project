@@ -8,8 +8,8 @@ export default function Project({ projectImg, projectName, projectLink }) {
   return (
     <div
       onClick={handleClick}
-      className='w-[350px] border-[1px] border-dashed border-y-orange-600
-      border-x-white h-[250px] rounded-2xl flex justify-center 
+      className='max-w-[390px] w-full border-[1px] border-dashed border-y-orange-600
+      border-x-white h-[250px] sm:h-[300px] md:h-[250px] rounded-2xl flex justify-center px-3
       items-center relative group cursor-pointer hover:scale-105 transition-all
       duration-300'
     >
@@ -21,7 +21,7 @@ export default function Project({ projectImg, projectName, projectLink }) {
         {projectName}
       </div>
 
-      <div className='w-[330px] bg-red-300 h-[230px] rounded-2xl overflow-hidden'>
+      <div className='max-w-[380px] w-full h-[220px] sm:h-[270px] md:h-[230px] rounded-2xl overflow-hidden'>
         <img src={projectImg} className='w-full h-full object-fill' alt={projectName} />
       </div>
     </div>

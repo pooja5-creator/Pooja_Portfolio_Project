@@ -36,7 +36,7 @@ export default function Header() {
   const tooltipClasses = "tooltipText logo textShadow";
 
   return (
-    <div className="w-full bg-gray-950 z-50 boxShadow relative">
+    <div className="w-full bg-gray-950 z-50 boxShadow relative px-3">
       <header className="max-w-[1220px] px-3 mx-auto flex justify-between items-center h-[100px]">
         <h1 className="logo text-3xl text-orange-600 border border-orange-600 font-bold px-2 py-1">PY</h1>
 
