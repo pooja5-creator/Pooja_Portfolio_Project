@@ -3,9 +3,10 @@ import PoojaImg from "/src/assets/poojaCreativeimg.png";
 import LinkArr from "../Data/linkData";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import CircleGroup from "./CircleGroup";
+
 
 export default function MainAboutPage({ setIsOpen }) {
+  console.log(setIsOpen);
   const skillArr = [ "JavaScript","React.js","Redux","HTML","CSS","Sass","Tailwind","GitHub"];
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function MainAboutPage({ setIsOpen }) {
           className="w-full h-auto flex justify-center items-center
             flex-col gap-5 mt-[50px] "
         >
-          <CircleGroup />
+          {/* <CircleGroup /> */}
 
           <div
             className="w-full xl:max-w-[1200px] h-auto 2xl:max-w-[1200px] 
@@ -100,13 +101,15 @@ export default function MainAboutPage({ setIsOpen }) {
             </p>
             <div
               className="w-full min-h-[50px] py-4 flex justify-start flex-wrap 
-              md:flex-nowrap items-start gap-3 lg:gap-5"
+              md:flex-nowrap items-start gap-3 lg:gap-5 "
             >
               {skillArr.map((skillItem, index) => (
                 <h1
                   className="text-gray-100 
                 px-2 sm:px-3 py-[8px] sm:py-2 text-[14px] sm:text-[16px]
-                rounded-2xl boxShadow2"
+                rounded-2xl boxShadow2 transform  hover:rotate-360 transition-all 
+                duration-500
+                ease-initial"
                   key={index}
                 >
                   {skillItem}
@@ -132,7 +135,8 @@ export default function MainAboutPage({ setIsOpen }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-100 text-[23px] sm:text-[27px]  rounded-[50%] 
-                      border-[1px] border-dashed my-1 xl:my-3
+                      border-[1px] border-dashed my-1 xl:my-3 transform hover:scale-125 transition-all duration-200 ease-initial
+
                      border-orange-600 px-[7px] sm:px-[10px] py-[1px]"
                   >
                     {linkItem.name}
@@ -148,17 +152,52 @@ export default function MainAboutPage({ setIsOpen }) {
                 );
               })}
             </div>
-            <button
-              className=" text-orange-600 font-semibold hover:text-gray-100
-            hover:bg-orange-600 transition-all duration-100 cursor-pointer mt-1 xl:mt-3 
-            px-2 sm:px-3 py-[4px] sm:py-2 rounded-2xl border-[1px] border-dashed text-[16px] 
-           sm:text-[18px] border-orange-100"
-            >
-              Hire Me
-            </button>
+<button
+ onClick={() => {
+  setTimeout(() => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  }, 400);
+     // Wait for animation to finish
+}}
+  className="text-orange-600 font-semibold hover:text-gray-100
+    hover:bg-orange-600 transition-all duration-100 cursor-pointer mt-1 xl:mt-3 
+    px-2 sm:px-3 py-[4px] sm:py-2 rounded-2xl border-[1px] border-dashed text-[16px] 
+    sm:text-[18px] border-orange-100 z-10"
+>
+  Hire Me
+</button>
+
+
+
+
           </div>
         </div>
       </motion.div>
     </motion.div>
   );
 }
+
+
+
+
+// <button
+//   onClick={() => {
+//     setIsOpen(false); // Close modal first
+//     setTimeout(() => {
+//       const contactSection = document.getElementById("contact");
+//       if (contactSection) {
+//         contactSection.scrollIntoView({ behavior: "smooth" });
+//       }
+//     }, 100); // delay to allow modal to close
+//   }}
+//   className=" text-orange-600 font-semibold hover:text-gray-100
+//     hover:bg-orange-600 transition-all duration-100 cursor-pointer mt-1 xl:mt-3 
+//     px-2 sm:px-3 py-[4px] sm:py-2 rounded-2xl border-[1px] border-dashed text-[16px] 
+//     sm:text-[18px] border-orange-100"
+// >
+//   Hire Me
+// </button>

@@ -6,7 +6,7 @@ import App from './App.jsx'
 import Home from './components/Home.jsx'
 const About = React.lazy(()=> import ('./components/About.jsx'))
 const Contact = React.lazy(()=> import ('./components/Contact.jsx'))
-const Career = React.lazy(()=> import ('./components/Career.jsx'))
+
 
 
 const router = createBrowserRouter([
@@ -33,13 +33,7 @@ const router = createBrowserRouter([
       <Contact/>
       </Suspense>
     },
-    {
-      path:'/career',
-      element:
-      <Suspense fallback={<div>Loading...</div>}>
-        <Career/>
-      </Suspense>
-    },
+   
   ]
 }
 ])
