@@ -4,10 +4,18 @@ import LinkArr from "../Data/linkData";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-
 export default function MainAboutPage({ setIsOpen }) {
   console.log(setIsOpen);
-  const skillArr = [ "JavaScript","React.js","Redux","HTML","CSS","Sass","Tailwind","GitHub"];
+  const skillArr = [
+    "JavaScript",
+    "React.js",
+    "Redux",
+    "HTML",
+    "CSS",
+    "Sass",
+    "Tailwind",
+    "GitHub",
+  ];
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -152,52 +160,27 @@ export default function MainAboutPage({ setIsOpen }) {
                 );
               })}
             </div>
-<button
- onClick={() => {
-  setTimeout(() => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsOpen(false);
-  }, 400);
-     // Wait for animation to finish
-}}
-  className="text-orange-600 font-semibold hover:text-gray-100
+            <button
+              onClick={() => {
+                setTimeout(() => {
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                  setIsOpen(false);
+                }, 400);
+                // Wait for animation to finish
+              }}
+              className="text-orange-600 font-semibold hover:text-gray-100
     hover:bg-orange-600 transition-all duration-100 cursor-pointer mt-1 xl:mt-3 
     px-2 sm:px-3 py-[4px] sm:py-2 rounded-2xl border-[1px] border-dashed text-[16px] 
     sm:text-[18px] border-orange-100 z-10"
->
-  Hire Me
-</button>
-
-
-
-
+            >
+              Hire Me
+            </button>
           </div>
         </div>
       </motion.div>
     </motion.div>
   );
 }
-
-
-
-
-// <button
-//   onClick={() => {
-//     setIsOpen(false); // Close modal first
-//     setTimeout(() => {
-//       const contactSection = document.getElementById("contact");
-//       if (contactSection) {
-//         contactSection.scrollIntoView({ behavior: "smooth" });
-//       }
-//     }, 100); // delay to allow modal to close
-//   }}
-//   className=" text-orange-600 font-semibold hover:text-gray-100
-//     hover:bg-orange-600 transition-all duration-100 cursor-pointer mt-1 xl:mt-3 
-//     px-2 sm:px-3 py-[4px] sm:py-2 rounded-2xl border-[1px] border-dashed text-[16px] 
-//     sm:text-[18px] border-orange-100"
-// >
-//   Hire Me
-// </button>

@@ -1,6 +1,6 @@
 // ThreeCanvas.jsx
-import React, { useRef, useEffect } from 'react';
-import * as THREE from 'three';
+import React, { useRef, useEffect } from "react";
+import * as THREE from "three";
 
 export default function ThreeCanvas() {
   const mountRef = useRef(null);
@@ -70,7 +70,8 @@ export default function ThreeCanvas() {
 
     // 📏 Handle resizing
     const handleResize = () => {
-      camera.aspect = mountRef.current.clientWidth / mountRef.current.clientHeight;
+      camera.aspect =
+        mountRef.current.clientWidth / mountRef.current.clientHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(
         mountRef.current.clientWidth,
@@ -78,26 +79,26 @@ export default function ThreeCanvas() {
       );
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       mountRef.current.removeChild(renderer.domElement);
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
     <div
       ref={mountRef}
-      className='hidden sm:flex'
+      className="hidden sm:flex"
       style={{
-        position: 'absolute',
-        bottom: '150px',
+        position: "absolute",
+        bottom: "150px",
         right: 0,
-        width: '100%',
-        height: '100px',
+        width: "100%",
+        height: "100px",
         zIndex: 0,
-        pointerEvents: 'none',
+        pointerEvents: "none",
       }}
     />
   );

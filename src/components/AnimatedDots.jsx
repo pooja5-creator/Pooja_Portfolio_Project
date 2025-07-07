@@ -1,5 +1,5 @@
-export default function AnimatedDots({ position}) {
-  const delays = ['0ms', '200ms', '400ms'];
+export default function AnimatedDots({ position }) {
+  const delays = ["0ms", "200ms", "400ms"];
 
   return (
     <div

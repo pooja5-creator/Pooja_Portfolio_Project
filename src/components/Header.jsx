@@ -51,18 +51,22 @@ export default function Header() {
               linkItem.link.startsWith("mailto");
             return isExternal ? (
               <div className="group">
-              <a
-                key={index}
-                href={linkItem.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-lg text-white  group-hover:text-orange-600 transition-all 
+                <a
+                  key={index}
+                  href={linkItem.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-lg text-white  group-hover:text-orange-600 transition-all 
                 duration-200 ease-linear"
-              >
-                {linkItem.name}
-                <span className="text-white text-[15px] group-hover:text-orange-600 transition-all 
-                duration-200 ease-linear">{linkItem.mainName}</span>
-              </a>
+                >
+                  {linkItem.name}
+                  <span
+                    className="text-white text-[15px] group-hover:text-orange-600 transition-all 
+                duration-200 ease-linear"
+                  >
+                    {linkItem.mainName}
+                  </span>
+                </a>
               </div>
             ) : (
               <Link

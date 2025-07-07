@@ -3,8 +3,6 @@
 .iconHover {
   @apply  group-hover:scale-110 transition-all duration-200 ease-linear text-[36px];
 }
- /* group-hover:scale-110 transition-all duration-200 */
-                 /* ease-linear text-[36px]  */
 
 .tooltipText {
   @apply absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100
@@ -12,8 +10,5 @@
   transition-all duration-200 whitespace-nowrap
 }
 
-/* .test {
-  @apply text-red-500 font-bold;
-} */
 
          

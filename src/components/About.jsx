@@ -21,9 +21,7 @@ export default function About() {
       <AnimatedDots position="right" />
 
       <AnimatePresence>
-  
-          {isOpen && <MainAboutPage setIsOpen={setIsOpen} />}
-        
+        {isOpen && <MainAboutPage setIsOpen={setIsOpen} />}
       </AnimatePresence>
     </div>
   );
